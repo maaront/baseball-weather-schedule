@@ -1,0 +1,27 @@
+html {
+    background-color: #54796d;
+    color: white;
+    font-family: 'Playball', cursive;
+}
+
+#logo-container {
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 10px;
+
+}
+
+.team-logo {
+    display: flex;
+    height: 100px;
+    align-items: center;
+}
