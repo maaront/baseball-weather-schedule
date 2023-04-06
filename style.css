@@ -1,0 +1,63 @@
+/* General styles */
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #FFFFFF;
+}
+
+.container {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+/* Title styles */
+.title {
+  color: #0C2340;
+  text-align: center;
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+/* Team info styles */
+.team-info {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.team-logo {
+  width: 100px;
+  height: auto;
+}
+
+.subtitle {
+  color: #E31937;
+  font-size: 1.8rem;
+}
+
+/* Games list styles */
+.games-list {
+  list-style-type: none;
+  padding: 0;
+}
+
+.games-list li {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0C2340;
+  color: #FFFFFF;
+  padding: 1rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.games-list li:hover {
+  background-color: #E31937;
+}
+
+.weather-info {
+  display: none;
+}
