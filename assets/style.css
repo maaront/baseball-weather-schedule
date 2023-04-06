@@ -13,6 +13,22 @@ header h2 {
     font-size: 2rem;
 }
 
+
+/*Hover effects*/ 
+
+.hide {
+    display: none;
+  }
+      
+  .myDIV:hover + .hide {
+    display: block;
+    color: red;
+  }
+
+
+
+
+
 a {
     text-decoration: none;
     color: white;
