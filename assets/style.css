@@ -25,6 +25,7 @@ a {
     justify-content: space-around;
     align-items: center;
     margin: auto;
+    margin-bottom: 50px;
 }
 
 .team {
