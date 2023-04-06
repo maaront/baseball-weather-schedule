@@ -11,15 +11,23 @@ const teamLogo = document.querySelector(".team-logo");
 const teamName = document.getElementById("team-name");
 const gamesList = document.getElementById("games-list");
 
+
+// Get the ID from session storage
+const teamData = sessionStorage.getItem("team-id");
+const teamAbbreviation = sessionStorage.getItem("team-abbreviation");
+
+console.log(teamData);
+console.log(teamAbbreviation);
+
 // Retrieve team data from sessionStorage
-const teamData = JSON.parse(sessionStorage.getItem('selectedTeam')) || {
-    id: 147, // Cleveland Guardians' team ID
-    name: 'Cleveland Guardians',
-    abbreviation: 'CLE',
-  };
+// const teamData = JSON.parse(sessionStorage.getItem('selectedTeam')) || {
+//     id: 114, // Cleveland Guardians' team ID
+//     name: 'Cleveland Guardians',
+//     abbreviation: 'CLE',
+//   };
 
 // Construct the logo URL using the team ID
-const logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${teamData.abbreviation}.png`;
+const logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${teamAbbreviation}.png`;
 
 // Update team logo and name
 teamLogo.src = logoURL;

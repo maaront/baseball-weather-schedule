@@ -7,7 +7,27 @@
   <link rel="stylesheet" href="/assets/style.css">
 </head>
 <body>
-  <h1>Baseball Weather ${data}</h1>
-  <script src="/team-script.js"></script>
+  <h1>Baseball Weather</h1>
+  <div class="team-info">
+    <img class="team-logo" alt="Team Logo">
+    <h2 id="team-name"></h2>
+  </div>
+  <ul id="games-list"></ul>
+  <div id="weather-modal" class="modal">
+    <div class="modal-background"></div>
+    <div class="modal-content">
+      <div class="box">
+        <h2 class="title is-4" id="weather-title">Weather Information</h2>
+        <p id="weather-description"></p>
+        <p id="weather-temperature"></p>
+        <p id="weather-wind-speed"></p>
+        <p id="weather-humidity"></p>
+        <p id="weather-rain-chance"></p>
+      </div>
+    </div>
+    <button class="modal-close is-large" aria-label="close"></button>
+  </div>
+  <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
+  <script src="/assets/team-script.js"></script>
 </body>
 </html>
