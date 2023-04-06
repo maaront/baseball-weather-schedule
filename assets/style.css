@@ -1,7 +1,21 @@
 html {
     background-color: #54796d;
     color: white;
-    font-family: 'Playball', cursive;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+a {
+    text-decoration: none;
+    color: white;
 }
 
 #logo-container {
@@ -10,18 +24,31 @@ html {
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
 }
 
 .team {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     align-items: center;
-    padding: 10px;
-
+    margin: 25px;
+    height: 150px;
+    transition: all .2s ease-in-out;
+}
+.team:hover {
+    transform: scale(1.1);
 }
 
 .team-logo {
     display: flex;
     height: 100px;
-    align-items: center;
+    align-items: start;
+    padding-bottom: 10px;
 }
+
+.team-name {
+    align-items: end;
+    font-weight: bold;
+}
+
