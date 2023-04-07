@@ -5,6 +5,7 @@ const weatherURL = "https://api.openweathermap.org/data/2.5/weather";
 // Define API key
 const apiKey = "AIzaSyDlAGwmtyyL0LvNpxgoBbkgVJfElCJaz2g";
 const weatherApiKey = 'f9eb7079ff683e087e86d13e52641a67';
+let logoURL;
 
 // Define DOM elements
 const teamLogo = document.querySelector(".team-logo");
@@ -21,44 +22,48 @@ if (search) {
     var nameparams = arrparams[0]
     var name = decodeURI (nameparams.split("=")[1]);
 
-var idparam = arrparams[1]
-var id = (idparam.split("=")[1])
+    var idparam = arrparams[1]
+    var id = (idparam.split("=")[1])
 
-var abbparam = arrparams[2]
-var abbreviation = (abbparam.split("=")[1])
+    var abbparam = arrparams[2]
+    var abbreviation = (abbparam.split("=")[1])
+    console.log(name);
+    console.log(id);
+    console.log(abbreviation);
+    id = parseInt(id);
+    getSchedule(id, name, abbreviation).then();
 
-
-console.log(name);
-console.log(id);
-console.log(abbreviation);
-}
-
-
-// Retrieve team data from sessionStorage
-const teamData = JSON.parse(sessionStorage.getItem('selectedTeam'))
-// || {
-//     id: number,
-//     name: `name`,
-//     abbreviation: `abbreviation`,
-//     }
-// ;
-
-console.log(JSON.parse(sessionStorage.getItem('selectedTeam')));
-
-// Retrieve team data from sessionStorage
-// const teamData = JSON.parse(sessionStorage.getItem('selectedTeam')) || {
-//     id: 147, // Cleveland Guardians' team ID
-//     name: 'Cleveland Guardians',
-//     abbreviation: 'CLE',
-//   }
-// ;
-
-// Construct the logo URL using the team ID
-const logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${teamData.abbreviation}.png`;
+    // Construct the logo URL using the team ID
+logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${abbreviation}.png`;
 
 // Update team logo and name
 teamLogo.src = logoURL;
-teamName.textContent = teamData.name;
+teamName.textContent = name;
+}
+
+
+
+
+// const teamData = {
+//     id: id,
+//     abbreviation: abbreviation,
+//     name: name
+//   };
+
+
+// Retrieve team data from sessionStorage
+const teamData = {
+    // id: 147, // Cleveland Guardians' team ID
+    name: 'Cleveland Guardians',
+    abbreviation: 'CLE',
+  };
+
+console.log(teamData.id);
+console.log(teamData.abbreviation);
+console.log(teamData.name);
+
+
+
 
 // Define function to get the MLB schedule for a given team
 async function getSchedule(teamId) {
@@ -133,4 +138,4 @@ async function getSchedule(teamId) {
     }
   }
   
-  getSchedule(teamData.id);
+//   getSchedule(teamData.id);
