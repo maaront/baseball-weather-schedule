@@ -12,14 +12,14 @@ const teamLogo = document.querySelector(".team-logo");
 const teamName = document.getElementById("team-name");
 const gamesList = document.getElementById("games-list");
 
-console.log(window.location.search.split("?")[1]);
+// Gather information from the webpage URL, put it in a new variable split by the "?" character
 var search = window.location.search.split("?")[1];
-var name, id, abbreviation;
-if (search) {
-    search.split("&")
-    let arrparams = search.split("&")
+var name, id, abbreviation; // Create new variables for teamData
+if (search) { // Create new loop to begin dissected the URL
+    search.split("&") // Split the data based on the &" character"
+    let arrparams = search.split("&") 
 
-    var nameparams = arrparams[0]
+    var nameparams = arrparams[0] 
     var name = decodeURI (nameparams.split("=")[1]);
 
     var idparam = arrparams[1]
@@ -33,37 +33,13 @@ if (search) {
     id = parseInt(id);
     getSchedule(id, name, abbreviation).then();
 
-    // Construct the logo URL using the team ID
+// Construct the logo URL using the team ID
 logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${abbreviation}.png`;
 
 // Update team logo and name
 teamLogo.src = logoURL;
 teamName.textContent = name;
 }
-
-
-
-
-// const teamData = {
-//     id: id,
-//     abbreviation: abbreviation,
-//     name: name
-//   };
-
-
-// Retrieve team data from sessionStorage
-const teamData = {
-    // id: 147, // Cleveland Guardians' team ID
-    name: 'Cleveland Guardians',
-    abbreviation: 'CLE',
-  };
-
-console.log(teamData.id);
-console.log(teamData.abbreviation);
-console.log(teamData.name);
-
-
-
 
 // Define function to get the MLB schedule for a given team
 async function getSchedule(teamId) {
@@ -137,5 +113,3 @@ async function getSchedule(teamId) {
       console.error(error);
     }
   }
-  
-//   getSchedule(teamData.id);
