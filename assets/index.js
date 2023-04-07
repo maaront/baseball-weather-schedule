@@ -12,17 +12,26 @@ teamEls.forEach(element => {
     // Get the ID (which is the team abbreviation) of the clicked element
     const number = element.dataset.number;
     const abbreviation = element.id;
-    // Save the ID to session storage
-    sessionStorage.setItem("team-id", number);
-    sessionStorage.setItem("team-abbreviation", abbreviation);
+    const name = element.dataset.name;
+    // // Save the ID to session storage
+    // sessionStorage.setItem("team-id", number);
+    // sessionStorage.setItem("team-name", name);
+    // sessionStorage.setItem("team-abbreviation", abbreviation);
+    
 
-// Get the ID from session storage
-const data = sessionStorage.getItem("team-id");
+    sessionStorage.setItem('teamData', JSON.stringify({
+        "teamId": number,
+        'teamAbbreviation': abbreviation,
+        'teamName': name}))
 
-window.location.href = "./team.html?id=" + data;
+    // Construct the logo URL using the team name
+    window.location.href = "./team.html?name=" + name;
 
 });
 });
+
+// // Get the ID from session storage
+// const data = sessionStorage.getItem("team-name");
 
 // // Generate the URL for the new webpage
 // const url = `https://maaront.github.io/baseball-weather-schedule/?data=${encodeURIComponent(data)}`;

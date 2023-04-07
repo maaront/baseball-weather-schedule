@@ -7,19 +7,29 @@ const apiKey = "AIzaSyDlAGwmtyyL0LvNpxgoBbkgVJfElCJaz2g";
 const weatherApiKey = 'f9eb7079ff683e087e86d13e52641a67';
 
 // Define DOM elements
-const teamLogo = document.querySelector(".team-logo");
-const teamName = document.getElementById("team-name");
-const gamesList = document.getElementById("games-list");
-
-
-// Get the ID from session storage
-const teamData = sessionStorage.getItem("team-id");
-const teamAbbreviation = sessionStorage.getItem("team-abbreviation");
-
-console.log(teamData);
-console.log(teamAbbreviation);
+const teamLogoEl = document.querySelector(".team-logo");
+const teamNameEl = document.getElementById("team-name");
+const gamesListEl = document.getElementById("games-list");
 
 // Retrieve team data from sessionStorage
+const teamData = JSON.parse(sessionStorage.getItem('teamData'));
+//valid fields are:
+// teamId
+// teamAbbreviation
+// teamName
+
+console.log(teamData.teamId);
+console.log(teamData.teamAbbreviation);
+console.log(teamData.teamName);
+
+const teamId = teamData.teamId;
+const teamAbbreviation = teamData.teamAbbreviation;
+const teamName = teamData.teamName;
+
+console.log(teamId);
+console.log(teamAbbreviation);
+console.log(teamName);
+
 // const teamData = JSON.parse(sessionStorage.getItem('selectedTeam')) || {
 //     id: 114, // Cleveland Guardians' team ID
 //     name: 'Cleveland Guardians',
@@ -30,8 +40,8 @@ console.log(teamAbbreviation);
 const logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${teamAbbreviation}.png`;
 
 // Update team logo and name
-teamLogo.src = logoURL;
-teamName.textContent = teamData.name;
+teamLogoEl.src = logoURL;
+teamNameEl.textContent = teamName;
 
 // Define function to get the MLB schedule for a given team
 async function getSchedule(teamId) {
@@ -44,7 +54,7 @@ async function getSchedule(teamId) {
       })).slice(0, 10);
   
       // Clear the previous games list
-      gamesList.innerHTML = "";
+      gamesListEl.innerHTML = "";
   
       // Loop through the games and create list items for each game
       for (const game of games) {
@@ -99,7 +109,7 @@ async function getSchedule(teamId) {
           }
         });
   
-        gamesList.appendChild(listItem);
+        gamesListEl.appendChild(listItem);
       }
     } catch (error) {
       console.error(error);
