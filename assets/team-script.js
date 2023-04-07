@@ -7,41 +7,58 @@ const apiKey = "AIzaSyDlAGwmtyyL0LvNpxgoBbkgVJfElCJaz2g";
 const weatherApiKey = 'f9eb7079ff683e087e86d13e52641a67';
 
 // Define DOM elements
-const teamLogoEl = document.querySelector(".team-logo");
-const teamNameEl = document.getElementById("team-name");
-const gamesListEl = document.getElementById("games-list");
+const teamLogo = document.querySelector(".team-logo");
+const teamName = document.getElementById("team-name");
+const gamesList = document.getElementById("games-list");
+
+console.log(window.location.search.split("?")[1]);
+var search = window.location.search.split("?")[1];
+var name, id, abbreviation;
+if (search) {
+    search.split("&")
+    let arrparams = search.split("&")
+
+    var nameparams = arrparams[0]
+    var name = decodeURI (nameparams.split("=")[1]);
+
+var idparam = arrparams[1]
+var id = (idparam.split("=")[1])
+
+var abbparam = arrparams[2]
+var abbreviation = (abbparam.split("=")[1])
+
+
+console.log(name);
+console.log(id);
+console.log(abbreviation);
+}
+
 
 // Retrieve team data from sessionStorage
-const teamData = JSON.parse(sessionStorage.getItem('teamData'));
-//valid fields are:
-// teamId
-// teamAbbreviation
-// teamName
+const teamData = JSON.parse(sessionStorage.getItem('selectedTeam'))
+// || {
+//     id: number,
+//     name: `name`,
+//     abbreviation: `abbreviation`,
+//     }
+// ;
 
-console.log(teamData.teamId);
-console.log(teamData.teamAbbreviation);
-console.log(teamData.teamName);
+console.log(JSON.parse(sessionStorage.getItem('selectedTeam')));
 
-const teamId = teamData.teamId;
-const teamAbbreviation = teamData.teamAbbreviation;
-const teamName = teamData.teamName;
-
-console.log(teamId);
-console.log(teamAbbreviation);
-console.log(teamName);
-
+// Retrieve team data from sessionStorage
 // const teamData = JSON.parse(sessionStorage.getItem('selectedTeam')) || {
-//     id: 114, // Cleveland Guardians' team ID
+//     id: 147, // Cleveland Guardians' team ID
 //     name: 'Cleveland Guardians',
 //     abbreviation: 'CLE',
-//   };
+//   }
+// ;
 
 // Construct the logo URL using the team ID
-const logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${teamAbbreviation}.png`;
+const logoURL = `https://a.espncdn.com/i/teamlogos/mlb/500/${teamData.abbreviation}.png`;
 
 // Update team logo and name
-teamLogoEl.src = logoURL;
-teamNameEl.textContent = teamName;
+teamLogo.src = logoURL;
+teamName.textContent = teamData.name;
 
 // Define function to get the MLB schedule for a given team
 async function getSchedule(teamId) {
@@ -54,7 +71,7 @@ async function getSchedule(teamId) {
       })).slice(0, 10);
   
       // Clear the previous games list
-      gamesListEl.innerHTML = "";
+      gamesList.innerHTML = "";
   
       // Loop through the games and create list items for each game
       for (const game of games) {
@@ -109,7 +126,7 @@ async function getSchedule(teamId) {
           }
         });
   
-        gamesListEl.appendChild(listItem);
+        gamesList.appendChild(listItem);
       }
     } catch (error) {
       console.error(error);

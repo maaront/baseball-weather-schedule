@@ -19,13 +19,13 @@ teamEls.forEach(element => {
     // sessionStorage.setItem("team-abbreviation", abbreviation);
     
 
-    sessionStorage.setItem('teamData', JSON.stringify({
-        "teamId": number,
-        'teamAbbreviation': abbreviation,
-        'teamName': name}))
+    sessionStorage.setItem('selectedTeam', JSON.stringify({
+        "id": number,
+        'abbreviation': abbreviation,
+        'name': name}))
 
     // Construct the logo URL using the team name
-    window.location.href = "./team.html?name=" + name;
+    window.location.href = "./team.html?name=" + name + "&number=" + number + "&abbreviation=" + abbreviation;
 
 });
 });
