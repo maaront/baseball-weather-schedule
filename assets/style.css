@@ -13,12 +13,45 @@ header h2 {
     font-size: 2rem;
 }
 
+.displayArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #54796d;
+  padding: 20px;
+}
+
+.favorites-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h3 {
+  color: black;
+}
+
+.showHide {
+    text-decoration: none;
+    color: white;
+    text-align: -webkit-center;
+    display:none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: -webkit-center;
 a {
     text-decoration: none;
     color: white;
 }
 
 #logo-container {
+    position: relative;
     max-width: 80%;
     display: flex;
     flex-wrap: wrap;
@@ -37,6 +70,7 @@ a {
     height: 150px;
     transition: all .2s ease-in-out;
 }
+
 .team:hover {
     transform: scale(1.1);
 }
@@ -52,4 +86,20 @@ a {
     align-items: end;
     font-weight: bold;
 }
+
+.favoriteheart {
+    color: rgb(255, 238, 0);
+    display: flex;
+    flex-direction: row;
+    padding-left: 140px;
+    margin-right: 13px;
+    opacity: 0; /*hidden initially */
+}
+
+.favoriteheart:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
 
