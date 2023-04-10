@@ -26,14 +26,6 @@
       type="text/css"
       href="./assets/style.css"
     />
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Hanken+Grotesk:wght@400;500;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" type="text/css" href="/assets/style.css">
     <title>Baseball Weather App</title>
   </head>
   <body>
@@ -45,197 +37,131 @@
         <h3>Favorite Teams</h3>
         <div class="displayShow" id="favoritesContainer">
           <!-- Favorite teams will be displayed here -->
+          <div class="team" data-id="109">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/ARI.png" alt="Arizona Diamondbacks Logo">
+            <p>Arizona Diamondbacks</p>
+          </div>
+          <div class="team" data-id="144">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/ATL.png" alt="Atlanta Braves Logo">
+            <p>Atlanta Braves</p>
+          </div>
+          <div class="team" data-id="110">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/BAL.png" alt="Baltimore Orioles Logo">
+            <p>Baltimore Orioles</p>
+          </div>
+          <div class="team" data-id="111">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/BOS.png" alt="Boston Red Sox Logo">
+            <p>Boston Red Sox</p>
+          </div>
+          <div class="team" data-id="112">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/CHC.png" alt="Chicago Cubs Logo">
+            <p>Chicago Cubs</p>
+          </div>
+          <div class="team" data-id="145">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/CWS.png" alt="Chicago White Sox Logo">
+            <p>Chicago White Sox</p>
+          </div>
+          <div class="team" data-id="113">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/CIN.png" alt="Cincinnati Reds Logo">
+            <p>Cincinnati Reds</p>
+          </div>
+          <div class="team" data-id="114">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/CLE.png" alt="Cleveland Guardians Logo">
+            <p>Cleveland Guardians</p>
+          </div>
+          <div class="team" data-id="115">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/COL.png" alt="Colorado Rockies Logo">
+            <p>Colorado Rockies</p>
+          </div>
+          <div class="team" data-id="116">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/DET.png" alt="Detroit Tigers Logo">
+            <p>Detroit Tigers</p>
+          </div>
+          <div class="team" data-id="117">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/HOU.png" alt="Houston Astros Logo">
+            <p>Houston Astros</p>
+          </div>
+          <div class="team" data-id="118">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/KC.png" alt="Kansas City Royals Logo">
+            <p>Kansas City Royals</p>
+          </div>
+          <div class="team" data-id="108">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/LAA.png" alt="Los Angeles Angels Logo">
+            <p>Los Angeles Angels</p>
+          </div>
+          <div class="team" data-id="119">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/LAD.png" alt="Los Angeles Dodgers Logo">
+            <p>Los Angeles Dodgers</p>
+          </div>
+          <div class="team" data-id="146">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/MIA.png" alt="Miami Marlins Logo">
+            <p>Miami Marlins</p>
+          </div>
+          <div class="team" data-id="158">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/MIL.png" alt="Milwaukee Brewers Logo">
+            <p>Milwaukee Brewers</p>
+          </div>
+          <div class="team" data-id="142">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/MIN.png" alt="Minnesota Twins Logo">
+            <p>Minnesota Twins</p>
+          </div>
+          <div class="team" data-id="121">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/NYM.png" alt="New York Mets Logo">
+            <p>New York Mets</p>
+          </div>
+          <div class="team" data-id="147">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/NYY.png" alt="New York Yankees Logo">
+            <p>New York Yankees</p>
+          </div>
+          <div class="team" data-id="133">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/OAK.png" alt="Oakland Athletics Logo">
+            <p>Oakland Athletics</p>
+          </div>
+          <div class="team" data-id="143">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/PHI.png" alt="Philadelphia Phillies Logo">
+            <p>Philadelphia Phillies</p>
+          </div>
+          <div class="team" data-id="134">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/PIT.png" alt="Pittsburgh Pirates Logo">
+            <p>Pittsburgh Pirates</p>
+          </div>
+          <div class="team" data-id="135">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/SD.png" alt="San Diego Padres Logo">
+            <p>San Diego Padres</p>
+          </div>
+          <div class="team" data-id="137">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/SEA.png" alt="Seattle Mariners Logo">
+            <p>Seattle Mariners</p>
+          </div>
+          <div class="team" data-id="138">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/SF.png" alt="San Francisco Giants Logo">
+            <p>San Francisco Giants</p>
+          </div>
+          <div class="team" data-id="139">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/STL.png" alt="St. Louis Cardinals Logo">
+            <p>St. Louis Cardinals</p>
+          </div>
+          <div class="team" data-id="140">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/TB.png" alt="Tampa Bay Rays Logo">
+            <p>Tampa Bay Rays</p>
+          </div>
+          <div class="team" data-id="141">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/TEX.png" alt="Texas Rangers Logo">
+            <p>Texas Rangers</p>
+          </div>
+          <div class="team" data-id="136">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/TOR.png" alt="Toronto Blue Jays Logo">
+            <p>Toronto Blue Jays</p>
+          </div>
+          <div class="team" data-id="120">
+            <img src="https://a.espncdn.com/i/teamlogos/mlb/500/WSH.png" alt="Washington Nationals Logo">
+            <p>Washington Nationals</p>
+          </div>
+        </div>
         </div>
       </section>
     </div>
     <section id="logo-container"></section>
     <script src="./assets/favjs.js"></script>
   </body>
-        <h2>BASEBALL WEATHER</h2>
-        <section id="favorite"></section>
-        <hr />
-    </header>
-    <section id="logo-container">     
-            <section class="team">
-                <img class="team-logo" id="ARI" data-number="109" data-name="Arizona Diamondbacks" alt="Arizona Diamondbacks Logo" src="/assets/icons/arizona_diamondbacks_logo_primary_20123733.png">
-                <section class="team-name">Arizona Diamondbacks</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="ATL" data-number="144" data-name="Atlanta Braves" alt="Atlanta Braves Logo" src="/assets/icons/atlanta_braves_logo_primary_20221869.png">
-                <section class="team-name">Atlanta Braves</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="BAL" data-number="110" data-name="Baltimore Orioles" alt="Baltimore Orioles Logo" src="/assets/icons/baltimore_orioles_logo_primary_20195398.png">
-                <section class="team-name">Baltimore Orioles</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="BOS" data-number="111" data-name="Boston Red Sox" alt="Boston Red Sox Logo" src="/assets/icons/boston_red_sox_logo_primary_20097510.png">
-                <section class="team-name">Boston Red Sox</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="CHC" data-number="112" data-name="Chicago Cubs" alt="Chicago Cubs Logo" src="/assets/icons/chicago_cubs_logo_primary_19792956.png">
-                <section class="team-name">Chicago Cubs</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="CHW" data-number="145" data-name="Chicago White Sox" alt="Chicago White Sox Logo" src="/assets/icons/chicago_white_sox_logo_primary_19911413.png">
-                <section class="team-name">Chicago White Sox</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="CIN" data-number="113" data-name="Cincinnati Reds" alt="Cincinnati Reds Logo" src="/assets/icons/cincinnati_reds_logo_primary_20133208.png">
-                <section class="team-name">Cincinnati Reds</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="CLE" data-number="114" data-name="Cleveland Guardians" alt="Cleveland Guardians Logo" src="/assets/icons/cleveland_guardians_logo_primary_2022_sportslogosnet-5538.png">
-                <section class="team-name">Cleveland Guardians</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="COL" data-number="115" data-name="Colorado Rockies" alt="Colorado Rockies Logo" src="/assets/icons/colorado_rockies_logo_primary_20171892.png">
-                <section class="team-name">Colorado Rockies</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="DET" data-number="116" data-name="Detroit Tigers" alt="Detroit Tigers Logo" src="/assets/icons/detroit_tigers-primary-2016.png">
-                <section class="team-name">Detroit Tigers</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="HOU" data-number="117" data-name="Houston Astros" alt="Houston Astros Logo" src="/assets/icons/houston_astros_logo_primary_20137038.png">
-                <section class="team-name">Houston Astros</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="KC" data-number="118" data-name="Kansas City Royals" alt="Kansas City Royals Logo" src="/assets/icons/kansas_city_royals_logo_primary_20198736.png">
-                <section class="team-name">Kansas City Royals</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="LAA" data-number="108" data-name="Los Angeles Angels" alt="Los Angeles Angels Logo" src="/assets/icons/los_angeles_angels-primary-2016.png">
-                <section class="team-name">Los Angeles Angels</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="LAD" data-number="119" data-name="Los Angeles Dodgers" alt="Los Angeles Dodgers Logo" src="/assets/icons/los_angeles_dodgers_logo_primary_20127886.png">
-                <section class="team-name">Los Angeles Dodgers</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="MIA" data-number="146" data-name="Miami Marlins" alt="Miami Marlins Logo" src="/assets/icons/miami_marlins-primary-2019.png">
-                <section class="team-name">Miami Marlins</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="MIL" data-number="158" data-name="Milwaukee Brewers" alt="Milwaukee Brewers Logo" src="/assets/icons/milwaukee_brewers-primary-2020.png">
-                <section class="team-name">Milwaukee Brewers</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="MIN" data-number="142" data-name="Minnesota Twins" alt="Minnesota Twins Logo" src="/assets/icons/minnesota_twins_logo_primary_20102311.png">
-                <section class="team-name">Minnesota Twins</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="NYM" data-number="121" data-name="New York Mets" alt="New York Mets Logo" src="/assets/icons/new-york-mets.png">
-                <section class="team-name">New York Mets</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="NYY" data-number="147" data-name="New York Yankees" alt="New York Yankees Logo" src="/assets/icons/new-york-yankees.png">
-                <section class="team-name">New York Yankees</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="OAK" data-number="133" data-name="Oakland Athletics" alt="Oakland Athletics Logo" src="/assets/icons/oakland-athletics.png">
-                <section class="team-name">Oakland Athletics</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="PHI" data-number="143" data-name="Philadelphia Phillies" alt="Philadelphia Phillies Logo" src="/assets/icons/philadelphia_phillies_logo_primary_20193931.png">
-                <section class="team-name">Philadelphia Phillies</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="PIT" data-number="134" data-name="Pittsburgh Pirates" alt="Pittsburgh Pirates Logo" src="/assets/icons/pittsburgh_pirates-primary-2014.png">
-                <section class="team-name">Pittsburgh Pirates</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="SD" data-number="135" data-name="San Diego Padres<" alt="San Diego Padres Logo" src="/assets/icons/san_diego_padres-primary-2020.png">
-                <section class="team-name">San Diego Padres</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="SF" data-number="137" data-name="San Francisco Giants" alt="San Francisco Giants Logo" src="/assets/icons/san-francisco-giants.png">
-                <section class="team-name">San Francisco Giants</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="SEA" data-number="136" data-name="Seattle Mariners" alt="Seattle Mariners Logo" src="/assets/icons/seattle_mariners_logo_primary_19933809.png">
-                <section class="team-name">Seattle Mariners</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="STL" data-number="138" data-name="Saint Louis Cardinals" alt="Saint Louis Cardinals Logo" src="/assets/icons/st-louis-cardinals.png">
-                <section class="team-name">Saint Louis Cardinals</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="TB" data-number="139" data-name="Tampa Bay Rays" alt="Tampa Bay Rays Logo" src="/assets/icons/tampa_bay_rays_logo_primary_20196768.png">
-                <section class="team-name">Tampa Bay Rays</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="TEX" data-number="140" data-name="Texas Rangers" alt="Texas Rangers Logo" src="/assets/icons/texas-rangers.png">
-                <section class="team-name">Texas Rangers</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="TOR" data-number="141" data-name="Toronto Blue Jays" alt="Toronto Blue Jays Logo" src="/assets/icons/toronto_blue_jays-primary-2020.png">
-                <section class="team-name">Toronto Blue Jays</section>
-            </section>
-        </a>
-        <a href=#>
-            <section class="team">
-                <img class="team-logo" id="WSH" data-number="120" data-name="Washington Nationals" alt="Washington Nationals Logo" src="/assets/icons/washington-nationals.png">
-                <section class="team-name">Washington Nationals</section>
-            </section>
-        </a>
-    </section>
-    <script src="/assets/index.js"></script>
-</body>
 </html>

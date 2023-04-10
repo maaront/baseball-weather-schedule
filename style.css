@@ -1,0 +1,102 @@
+html {
+    background-color: #54796d;
+    color: white;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+header {
+    padding: 50px 0;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.displayArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #54796d;
+  padding: 20px;
+}
+
+.favorites-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h3 {
+  color: black;
+}
+
+.showHide {
+    text-decoration: none;
+    color: white;
+    text-align: -webkit-center;
+    display:none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: -webkit-center;
+}
+
+#logo-container {
+    position: relative;
+    max-width: 80%;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+    align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
+}
+
+.team {
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+    align-items: center;
+    margin: 25px;
+    height: 150px;
+    transition: all .2s ease-in-out;
+}
+
+.team:hover {
+    transform: scale(1.1);
+}
+
+.team-logo {
+    display: flex;
+    height: 100px;
+    align-items: start;
+    padding-bottom: 10px;
+}
+
+.team-name {
+    align-items: end;
+    font-weight: bold;
+}
+
+.favoriteheart {
+    color: rgb(255, 238, 0);
+    display: flex;
+    flex-direction: row;
+    padding-left: 140px;
+    margin-right: 13px;
+    opacity: 0; /*hidden initially */
+}
+
+.favoriteheart:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+
+
