@@ -13,7 +13,7 @@ const gamesList = document.getElementById("games-list");
 
 // Retrieve team data from sessionStorage
 const teamData = JSON.parse(sessionStorage.getItem('selectedTeam')) || {
-    id: 147, // Cleveland Guardians' team ID
+    id: 114, // Cleveland Guardians' team ID
     name: 'Cleveland Guardians',
     abbreviation: 'CLE',
   };

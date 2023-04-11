@@ -1,7 +1,9 @@
 /* General styles */
 body {
-  font-family: 'Arial', sans-serif;
-  background-color: #FFFFFF;
+  font-family: 'Hanken Grotesk', sans-serif;
+  background-color: #54796d;
+  color: white;
+  min-height: 100vh;
 }
 
 .container {
@@ -11,7 +13,6 @@ body {
 
 /* Title styles */
 .title {
-  color: #0C2340;
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -31,7 +32,6 @@ body {
 }
 
 .subtitle {
-  color: #E31937;
   font-size: 1.8rem;
 }
 
@@ -46,18 +46,52 @@ body {
   justify-content: space-between;
   align-items: center;
   background-color: #0C2340;
-  color: #FFFFFF;
   padding: 1rem;
   border-radius: 5px;
   margin-bottom: 1rem;
   cursor: pointer;
-  transition: background-color 0.3s;
+  transition: background-color 0.3s, color 0.3s;
+}
+
+.games-list li * {
+  transition: color 0.3s;
 }
 
 .games-list li:hover {
   background-color: #E31937;
 }
 
+.games-list li:hover * {
+  color: black;
+  font-weight: bold;
+}
+
 .weather-info {
   display: none;
 }
+
+h1,
+h2,
+h4,
+p,
+li {
+  color: white;
+}
+
+.modal-content .box {
+  background-color: rgba(84, 121, 109, 0.8);
+  color: white;
+}
+
+.modal-content .box h2,
+.modal-content .box p {
+  color: white;
+}
+
+
+
+
+
+
+
+
