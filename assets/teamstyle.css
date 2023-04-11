@@ -1,3 +1,4 @@
+
 /* General styles */
 body {
   font-family: 'Hanken Grotesk', sans-serif;
@@ -13,6 +14,7 @@ body {
 
 /* Title styles */
 .title {
+
   text-align: center;
   font-size: 2.5rem;
   margin-bottom: 1rem;
@@ -53,6 +55,8 @@ body {
   transition: background-color 0.3s, color 0.3s;
 }
 
+
+
 .games-list li * {
   transition: color 0.3s;
 }
@@ -87,11 +91,3 @@ li {
 .modal-content .box p {
   color: white;
 }
-
-
-
-
-
-
-
-
