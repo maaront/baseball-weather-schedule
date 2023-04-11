@@ -45,9 +45,12 @@ a {
     text-decoration: none;
     color: white;
     text-align: -webkit-center;
+<<<<<<< HEAD
+=======
 a {
     text-decoration: none;
     color: white;
+>>>>>>> 5b9e3d3141db2b4e724c744817ca72c360e2a318
 }
 
 #logo-container {
