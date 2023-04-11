@@ -1,8 +1,14 @@
+/* general styles */
 html {
     background-color: #54796d;
     color: white;
     font-family: 'Hanken Grotesk', sans-serif;
 }
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
 
 header {
     padding: 50px 0;
@@ -79,6 +85,12 @@ a {
     padding-bottom: 10px;
 }
 
+/* .team-logo {
+    width: 100px;
+    height: auto;
+  } */
+
+
 .team-name {
     align-items: end;
     font-weight: bold;
@@ -98,5 +110,81 @@ a {
     background-color: rgba(0, 0, 0, 0);
 }
 
-
-
+  
+  /* Title styles */
+  .title {
+  
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Team info styles */
+  .team-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+ 
+  
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  
+  /* Games list styles */
+  .games-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .games-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C2340;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+  
+  .games-list li * {
+    transition: color 0.3s;
+  }
+  
+  .games-list li:hover {
+    background-color: #E31937;
+  }
+  
+  .games-list li:hover * {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .weather-info {
+    display: none;
+  }
+  
+  h1,
+  h2,
+  h4,
+  p,
+  li {
+    color: white;
+  }
+  
+  .modal-content .box {
+    background-color: rgba(84, 121, 109, 0.8);
+    color: white;
+  }
+  
+  .modal-content .box h2,
+  .modal-content .box p {
+    color: white;
+  }
+  
