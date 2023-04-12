@@ -80,10 +80,18 @@ a {
 
 .team-logo {
     display: flex;
+
     height: 150px;
+
     align-items: start;
     padding-bottom: 10px;
 }
+
+
+/* .team-logo {
+    width: 100px;
+    height: auto;
+  } */
 
 .team-name {
     align-items: end;
@@ -181,7 +189,7 @@ a {
   .modal-content .box p {
     color: white;
   }
-
+  
   /* team.html specific styles */
 .game-info {
   display: flex;

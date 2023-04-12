@@ -47,7 +47,9 @@ function createTeamElements() {
     teamElement.appendChild(favoriteButton);
 
     const teamLink = document.createElement("a");
+
     teamLink.href = `team.html?id=${team.id}`;
+
     teamElement.appendChild(teamLink);
 
     const teamLogo = document.createElement("img");
