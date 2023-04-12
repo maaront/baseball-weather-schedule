@@ -2,35 +2,29 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Baseball Weather</title>
-  <link rel="stylesheet" href="style.css">
-  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/bulma/0.9.3/css/bulma.min.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Playball&display=swap" rel="stylesheet">
+  <link rel="stylesheet" type="text/css" href="./assets/style.css">
+  <title>Baseball Weather App - Team Page</title>
 </head>
 <body>
-  <h1>Baseball Weather</h1>
+  <header>
+    <h2>BASEBALL WEATHER</h2>
+  </header>
   <div class="team-info">
-    <img class="team-logo" alt="Team Logo">
-    <h2 id="team-name"></h2>
+    <img id="team-logo" src="" alt="Team Logo">
+    <h1 id="team-name"></h1>
   </div>
-  <ul id="games-list"></ul>
+  <div class="schedule-list">
+    <ul id="schedule"></ul>
+  </div>
+  <h2 class="subtitle">Upcoming Schedule</h2>
+  <ul class="games-list" id="games-list"></ul>
   <script src="https://cdn.jsdelivr.net/npm/axios/dist/axios.min.js"></script>
-  <script src="team-script.js"></script>
-  <div id="weather-modal" class="modal">
-    <div class="modal-background"></div>
-    <div class="modal-content">
-      <div class="box">
-        <h2 class="title is-4" id="weather-title">Weather Information</h2>
-        <p id="weather-description"></p>
-        <p id="weather-temperature"></p>
-        <p id="weather-wind-speed"></p>
-        <p id="weather-humidity"></p>
-        <p id="weather-rain-chance"></p>
-      </div>
-    </div>
-    <button class="modal-close is-large" aria-label="close"></button>
-  </div>
-  
+  <script src="./assets/team-script.js"></script>
 </body>
 </html>
 

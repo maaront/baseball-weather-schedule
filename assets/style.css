@@ -1,27 +1,257 @@
+/* general styles */
 html {
     background-color: #54796d;
     color: white;
-    font-family: 'Playball', cursive;
+    font-family: 'Hanken Grotesk', sans-serif;
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+  }
+
+header {
+    padding: 50px 0;
+}
+
+header h2 {
+    text-align: center;
+    font-size: 2rem;
+}
+
+.displayArea {
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 10;
+  background-color: #54796d;
+  padding: 20px;
+}
+
+.favorites-section {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+h3 {
+  color: black;
+}
+
+.showHide {
+    text-decoration: none;
+    color: white;
+    text-align: -webkit-center;
+    display:none;
+    flex-direction: row;
+    justify-content: center;
+}
+
+a {
+    text-decoration: none;
+    color: white;
+    text-align: -webkit-center;
 }
 
 #logo-container {
+    position: relative;
     max-width: 80%;
     display: flex;
     flex-wrap: wrap;
     justify-content: space-around;
     align-items: center;
+    margin: auto;
+    margin-bottom: 50px;
 }
 
 .team {
     display: flex;
     flex-direction: column;
+    justify-content: end;
     align-items: center;
-    padding: 10px;
+    margin: 25px;
+    height: 150px;
+    transition: all .2s ease-in-out;
+}
 
+.team:hover {
+    transform: scale(1.1);
 }
 
 .team-logo {
     display: flex;
-    height: 100px;
-    align-items: center;
+    height: 150px;
+    align-items: start;
+    padding-bottom: 10px;
 }
+
+.team-name {
+    align-items: end;
+    font-weight: bold;
+}
+
+.favoriteheart {
+    color: rgb(255, 238, 0);
+    display: flex;
+    flex-direction: row;
+    padding-left: 140px;
+    margin-right: 13px;
+    opacity: 0; /*hidden initially */
+}
+
+.favoriteheart:hover {
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0);
+}
+
+  
+  /* Title styles */
+  .title {
+  
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+  }
+  
+  /* Team info styles */
+  .team-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+ 
+  
+  .subtitle {
+    font-size: 1.8rem;
+  }
+  
+  /* Games list styles */
+  .games-list {
+    list-style-type: none;
+    padding: 0;
+  }
+  
+  .games-list li {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #0C2340;
+    padding: 1rem;
+    border-radius: 5px;
+    margin-bottom: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s, color 0.3s;
+  }
+  
+  
+  
+  .games-list li * {
+    transition: color 0.3s;
+  }
+  
+  .games-list li:hover {
+    background-color: #E31937;
+  }
+  
+  .games-list li:hover * {
+    color: black;
+    font-weight: bold;
+  }
+  
+  .weather-info {
+    display: none;
+  }
+  
+  h1,
+  h2,
+  h4,
+  p,
+  li {
+    color: white;
+  }
+  
+  .modal-content .box {
+    background-color: rgba(84, 121, 109, 0.8);
+    color: white;
+  }
+  
+  .modal-content .box h2,
+  .modal-content .box p {
+    color: white;
+  }
+
+  /* team.html specific styles */
+.game-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.date,
+.opponent {
+  font-size: 1.2rem;
+  font-weight: bold;
+}
+
+.weather {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.weather-icon {
+  width: 30px;
+  height: 30px;
+}
+
+.details-button {
+  border: none;
+  background-color: transparent;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+  text-decoration: underline;
+}
+
+.details-button:focus {
+  outline: none;
+}
+
+.modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.8);
+  display: none;
+  justify-content: center;
+  align-items: center;
+}
+
+.modal-content {
+  background-color: #0C2340;
+  padding: 2rem;
+  border-radius: 5px;
+  width: 80%;
+  max-width: 500px;
+}
+
+.modal-close {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  background-color: transparent;
+  border: none;
+  color: white;
+  font-size: 1.5rem;
+  cursor: pointer;
+}
+
+.modal-close:focus {
+  outline: none;
+}
+
+  
