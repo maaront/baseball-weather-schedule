@@ -33,9 +33,11 @@ const teams = [
 
 const favoritesContainer = document.getElementById("favoritesContainer");
 
-function createTeamElements() {
   const logoContainer = document.getElementById("logo-container");
 
+function createTeamElements() {
+  const logoContainer = document.getElementById("logo-container");
+  
   teams.forEach((team) => {
     const teamElement = document.createElement("section");
     teamElement.classList.add("team");
