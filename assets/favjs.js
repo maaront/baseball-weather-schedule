@@ -76,6 +76,9 @@ function addFavorite(team) {
   const favoriteTeamElement = document.createElement("div");
   favoriteTeamElement.classList.add("favorite-team");
 
+  const favoriteTeamLink = document.createElement("a"); // Create an anchor tag for favorited team
+  favoriteTeamLink.href = 'team.html?id=${team.id}'; // Assign the url for the anchor tag
+
   const teamLogo = document.createElement("img");
   teamLogo.classList.add("team-logo");
   teamLogo.alt = `${team.name} Logo`;
@@ -84,7 +87,10 @@ function addFavorite(team) {
 
   const teamName = document.createElement("div");
   teamName.textContent = team.name;
+  
   favoriteTeamElement.appendChild(teamName);
+
+
 
   favoritesContainer.appendChild(favoriteTeamElement);
 }
