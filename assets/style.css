@@ -14,10 +14,22 @@ header {
     padding: 50px 0;
 }
 
-header h2 {
-    text-align: center;
-    font-size: 2rem;
-}
+.homeLogo { 
+  padding-top: 30px;
+  padding-bottom: 20px;
+  text-align: center;
+  }
+  
+  .homebutton {
+    height: 260px;
+    padding: 70px;
+  }
+  
+  .page2homebutton {
+    height: 150px;
+    padding: 30px;
+    padding-right: 40px;
+  }
 
 .displayArea {
   position: fixed;
