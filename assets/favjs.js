@@ -44,6 +44,7 @@ function createTeamElements() {
 
     const favoriteButton = document.createElement("button");
     favoriteButton.classList.add("favoriteheart");
+    favoriteButton.id = "favoriteheart";
     favoriteButton.setAttribute("data-team-name", team.name);
     favoriteButton.innerHTML = `<i class="fa fa-heart"></i>`;
     teamElement.appendChild(favoriteButton);
@@ -102,12 +103,16 @@ function updateFavoriteButtonListeners() {
   favoriteButtons.forEach((button) => {
     button.addEventListener("click", () => {
       // Remove the selected class from all favorite buttons
-      favoriteButtons.forEach((btn) => btn.classList.remove("selected"));
+      favoriteButtons.forEach((btn) => {
+        btn.classList.remove("selected");
+        localStorage.removeItem(`${btn.getAttribute("data-team-name")}_focused`); // Remove the focus state from localStorage
+      });
 
       const teamName = button.getAttribute("data-team-name");
       const team = teams.find((t) => t.name === teamName);
       localStorage.setItem("favoriteTeam", teamName);
       button.classList.add("selected");
+      localStorage.setItem(`${teamName}_focused`, "true"); // Save the focus state in localStorage
       addFavorite(team);
     });
   });
@@ -126,9 +131,15 @@ document.addEventListener("DOMContentLoaded", () => {
       );
       button.classList.add("selected");
       addFavorite(savedFavoriteTeam);
+
+      // Apply focus to the button if the focus state is saved in localStorage
+      if (localStorage.getItem(`${savedFavoriteTeamName}_focused`) === "true") {
+        button.focus();
+      }
     }
   }
 });
+
 
 createTeamElements();
 updateFavoriteButtonListeners();
