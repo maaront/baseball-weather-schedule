@@ -18,11 +18,12 @@ header {
   padding-top: 30px;
   padding-bottom: 20px;
   text-align: center;
+  
   }
   
   .homebutton {
-    height: 260px;
-    padding: 70px;
+    max-height: 150px;
+    padding-bottom: 30px;
   }
   
   .page2homebutton {
