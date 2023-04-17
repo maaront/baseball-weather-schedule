@@ -7,3 +7,5 @@ To get started with the app, simply navigate to the homepage and select your fav
 The app is called "Baseball Weather Tracker" and is designed to be a simple and easy-to-use tool for baseball fans who want to stay up-to-date on their team's schedule. The app is currently in development, so additional features may be added in the future.
 
 If you encounter any issues while using the app or have suggestions for future features, please feel free to reach out to the developer. Thank you for using Baseball Weather Tracker!
+
+<img width="1389" alt="Project #1 - Group 4_screenshotREADME" src="https://user-images.githubusercontent.com/49410376/232179629-86b879fa-cce5-4a38-8d75-5abadb375883.png">
